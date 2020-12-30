@@ -11,17 +11,12 @@ parameters|sceptre_user_data:
   <name>: !file /path/to/local/file
 ```
 
-```yaml
-parameters|sceptre_user_data:
-  <name>: !file URL/To/File
-```
-
 ## Examples
 
 ### Local file
 
-#### string
-Get file content and pass it to the parameter as a string:
+#### text
+Get file content and pass it to the parameter as a text string:
 
 tags/departments.txt
 ```
@@ -65,12 +60,4 @@ tags/departments.yaml
 ```yaml
 sceptre_user_data:
   departments: !file tags/departments.yaml
-```
-
-### URL
-Get file contents from a URL reference:
-
-```yaml
-sceptre_user_data:
-  departments: !file https://my-bucket.s3.us-east-1.amazonaws.com/tags/departments.json
 ```
